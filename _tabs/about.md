@@ -39,7 +39,7 @@ I specialize in the **Linux** ecosystem and **DevOps** practices, with a strong 
 I believe in a balance between the digital and the spiritual. I am a practitioner of **Stoicism** and **Declared Intention**, always striving to live with ethics and purpose.
 
 ### 🎮 Interests
-* **Gaming:** A huge fan of **FromSoftware** worlds. I've conquered *Dark Souls 1 & 3*, *Bloodborne*, and *Elden Ring*.
+* **Gaming:** A huge fan of **FromSoftware** worlds.
 * **Cinema:** Sci-Fi classics (*Alien*, *Blade Runner*, *Planet of the Apes*) and psychological horror (*Martyrs*, *It*).
 * **Reading:** From technical docs to Manga and theological history.
 
