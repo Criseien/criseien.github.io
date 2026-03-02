@@ -54,4 +54,4 @@ With this context, I have decided to change many aspects of my life. I have a si
 
 This blog is the start of that new journey. Here, I will document my path back to technical depth—mastering **Linux, Kubernetes, and certifications**—not just for the sake of work, but to gain the freedom to live on my own terms.
 
-Welcome to my route.
+Welcome to my site.
