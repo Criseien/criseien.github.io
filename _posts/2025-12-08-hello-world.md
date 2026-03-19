@@ -2,7 +2,7 @@
 title: "Hello World: Rebooting My Reality"
 date: 2025-12-08 14:00:00 -0600
 categories: [Life, Reflections]
-tags: [intro, sre, philosophy, growth]
+tags: [intro, platform-engineering, kubernetes, philosophy, growth]
 ---
 
 I am passionate about technology and automation, but also about everything that lies beyond the obvious.
@@ -11,7 +11,7 @@ After many years, I am creating a blog again. In my teenage years, I had one on 
 
 ## Who Am I?
 
-Let me introduce myself properly. By day, I am a **Site Reliability Engineer (SRE)** specializing in the Linux ecosystem, AWS, Ansible, and Python. I’m from Mexico (I love my country), and I currently lead a technical team.
+Let me introduce myself properly. By day, I am a **Platform Engineer** specializing in **Kubernetes networking and Linux internals**, currently serving as AVP in SRE at a bank in Mexico. I lead a technical team and spend my days debugging the things that most people just `kubectl apply` past.
 
 
 Beyond the screen, I am grounded by nature. My ultimate dream is to own a ranch, grow my own food, and live surrounded by green. For now, I find balance in:
@@ -52,6 +52,6 @@ My new philosophy is simple: Don't become the person who spends their whole life
 
 With this context, I have decided to change many aspects of my life. I have a single goal: **to live a full life that I won't regret.**
 
-This blog is the start of that new journey. Here, I will document my path back to technical depth—mastering **Linux, Kubernetes, and certifications**—not just for the sake of work, but to gain the freedom to live on my own terms.
+This blog is the start of that new journey. Here, I will document my path toward technical depth — mastering **Linux internals, Kubernetes networking, and certifications** — not just for the sake of work, but to gain the freedom to live on my own terms.
 
 Welcome to my site.
