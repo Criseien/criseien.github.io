@@ -16,10 +16,10 @@ timezone: America/Mexico_City
 
 title: Cristian's Blog # the main title
 
-tagline: I am passionate about continuous learning. # it will display as the subtitle
+tagline: Platform Engineer · Kubernetes Networking · Building from the internals out. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Blog by Cristian Gómez — Platform Engineer specializing in Kubernetes networking and Linux internals. Home of the From Scratch series: Platform Engineering from the primitives up.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -32,7 +32,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Cristian Gómez
-  email: agcristianaranda@gmail.com # change to your email address
+  email: agcristianaranda@icloud.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/criseien # change to your GitHub homepage
