@@ -5,20 +5,15 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> "We suffer more often in imagination than in reality." — Seneca
-{: .prompt-tip }
+> *"It is not that we have a short time to live, but that we waste a great deal of it."* — Seneca
 
-Hello! I'm **Cristian Gómez**, a Platform Engineer specializing in **Kubernetes Networking & Troubleshooting**, currently serving as AVP in Site Reliability Engineering in the **banking sector** in **Mexico**. I debug traffic flows at L3/L4 — network namespaces, veth pairs, iptables chains, CNI internals. Not just `kubectl apply`. From the primitives up.
+## Who I am
 
-This blog is where I write the **From Scratch** series: Platform Engineering explained from the internals out — for engineers who want to understand *why*, not just *how*.
+I'm **Cristian Gómez**, a Platform Engineer specializing in **Kubernetes networking and Linux internals**, currently serving as AVP in SRE at a bank in Mexico. I lead a technical team and spend my days debugging traffic flows at L3/L4 — network namespaces, veth pairs, iptables chains, CNI internals. Not just `kubectl apply`. From the primitives up.
 
-## 👨‍💻 Professional Profile
-
-With a Master's degree and over a decade in the tech industry, I lead a team of engineers with a background in production SRE automation at scale. My focus goes beyond keeping systems running — I dig into the network internals that make Kubernetes actually work. Every concept I study gets a lab, a commit, and a public breadcrumb.
+Outside of work I practice Stoicism, suffer through FromSoftware games, and have a long-term plan to own a ranch and grow my own food.
 
 ### Tech Stack & Focus
-
-I specialize in the **Linux** ecosystem and **Kubernetes networking**, with a strong emphasis on understanding systems from first principles.
 
 <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-start;">
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
@@ -30,25 +25,18 @@ I specialize in the **Linux** ecosystem and **Kubernetes networking**, with a st
   <img src="https://img.shields.io/badge/Cilium-F8C517?style=for-the-badge&logo=cilium&logoColor=black" alt="Cilium">
 </div>
 
-**What I'm Building:**
+## What this blog is
+
+This is the **From Scratch** series: Platform Engineering explained from the internals out, for engineers who want to understand *why*, not just *how*.
+
+Every article starts where the abstractions end — at the Linux kernel, at the iptables rule, at the conntrack table. I build the concept by hand, show the commands, map it back to what Kubernetes does under the hood, and close with a troubleshooting checklist you can actually use in production.
+
+The goal isn't to produce content. It's to go deep on the layer most engineers skip — and document that process publicly so it's useful to someone else too.
+
+**What I'm building:**
 * **[linux-networking-labs](https://github.com/criseien/linux-networking-labs)** — Hands-on labs: network namespaces, iptables, NAT, firewalld, SELinux — everything that runs under Kubernetes.
 * **[From Scratch series](https://icris.me)** — Platform Engineering from the internals out, published on this blog.
 * Targeting the **CKA** certification and a K8s networking specialist role (remote, US/EU market).
-
----
-
-## 🌲 Beyond the Screen
-
-I believe in a balance between the digital and the spiritual. I am a practitioner of **Stoicism** and **Declared Intention** — a personal philosophy of aligning daily actions with long-term purpose — always striving to live with ethics and meaning.
-
-### 🎮 Interests
-* **Gaming:** A huge fan of **FromSoftware** worlds.
-* **Cinema:** Sci-Fi classics (*Alien*, *Blade Runner*, *Planet of the Apes*) and psychological horror (*Martyrs*, *It*).
-* **Reading:** From technical docs to Manga and theological history.
-
-> **Life Goal:**
-> In the next 3-5 years, I aim to transition to a fully remote role and move to a **ranch**, growing my own food and enjoying the silence of nature with my family.
-{: .prompt-info }
 
 ---
 
