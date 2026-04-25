@@ -3,6 +3,7 @@ title: "How pods reach the internet: NAT and masquerading"
 date: 2026-03-27 14:00:00 -0600
 categories: [Linux, Kubernetes]
 tags: [networking, namespaces, nat, masquerade, iptables, conntrack, containers, k8s]
+description: "Why pods can't reach the internet by default and how iptables MASQUERADE fixes it — a deep dive into NAT, conntrack, and the path packets take out of a Kubernetes node."
 ---
 
 ## The problem

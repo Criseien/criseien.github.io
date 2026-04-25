@@ -3,6 +3,7 @@ title: "Hello World: Rebooting My Reality"
 date: 2025-12-08 14:00:00 -0600
 categories: [Life, Reflections]
 tags: [intro, platform-engineering, kubernetes, philosophy, growth]
+description: "Platform Engineer specializing in Kubernetes networking and Linux internals. This is my blog — a record of what I build, break, and learn."
 ---
 
 I am passionate about technology and automation, but also about everything that lies beyond the obvious.

@@ -3,6 +3,7 @@ title: "Building a container network from scratch: namespaces, veth, bridges"
 date: 2026-03-17 14:00:00 -0600
 categories: [Linux, Kubernetes]
 tags: [networking, namespaces, veth, bridge, iptables, containers, k8s, sre]
+description: "How Kubernetes pod networking actually works — built from Linux primitives: network namespaces, veth pairs, and bridges. No abstractions, just the kernel."
 ---
 
 ## The problem
