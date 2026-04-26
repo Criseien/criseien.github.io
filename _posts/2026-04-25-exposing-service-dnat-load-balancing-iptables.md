@@ -146,7 +146,7 @@ iptables -t nat -L PREROUTING -n -v --line-numbers
 
 ## The full picture
 
-![DNAT load balancing: external traffic arrives on eth0 port 8080, iptables PREROUTING applies DNAT to redirect to one of three namespaces (ns-blue, ns-green, ns-red) through br0, conntrack tracks each translation for the return path.](/assets/img/dnat-load-balancing.png)
+DNAT load balancing: external traffic arrives on eth0 port 8080, iptables PREROUTING applies DNAT to redirect to one of three namespaces (ns-blue, ns-green, ns-red) through br0, conntrack tracks each translation for the return path.
 
 The path an inbound packet takes:
 
