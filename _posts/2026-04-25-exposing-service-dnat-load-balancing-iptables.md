@@ -6,6 +6,11 @@ tags: [networking, namespaces, nat, dnat, iptables, conntrack, load-balancing, k
 description: "How to expose a container to the outside world and distribute traffic across multiple backends using iptables DNAT — the same mechanism kube-proxy uses for NodePort and ClusterIP services."
 ---
 
+> **From Scratch series — Part 3 of 3**
+> [← Part 1: Namespaces, veth, bridges](/posts/building-container-network-from-scratch/)
+> [← Part 2: NAT and masquerading](/posts/how-pods-reach-internet-nat-masquerading/)
+{: .prompt-tip }
+
 ## The problem
 
 You built the network: namespaces connected through `br0`, outbound traffic working via MASQUERADE. But traffic only flows *out*. An external client hitting your host's IP gets nothing back — the kernel has no idea what to do with it.

@@ -6,6 +6,11 @@ tags: [networking, namespaces, nat, masquerade, iptables, conntrack, containers,
 description: "Why pods can't reach the internet by default and how iptables MASQUERADE fixes it — a deep dive into NAT, conntrack, and the path packets take out of a Kubernetes node."
 ---
 
+> **From Scratch series — Part 2 of 3**
+> [← Part 1: Namespaces, veth, bridges](/posts/building-container-network-from-scratch/)
+> [Part 3: DNAT and load balancing →](/posts/exposing-service-dnat-load-balancing-iptables/)
+{: .prompt-tip }
+
 ## The problem
 
 Your namespace can reach other namespaces on the same host — you built that in the [previous article](/posts/building-container-network-from-scratch/). But try running `curl https://api.github.com` from inside one and you get nothing. The namespace is isolated. It has no path out.

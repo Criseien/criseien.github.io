@@ -6,6 +6,12 @@ tags: [networking, namespaces, veth, bridge, iptables, containers, k8s, sre]
 description: "How Kubernetes pod networking actually works — built from Linux primitives: network namespaces, veth pairs, and bridges. No abstractions, just the kernel."
 ---
 
+> **From Scratch series — Part 1 of 3**
+> Build the Kubernetes network stack from the kernel up, one primitive at a time.
+> [Part 2: NAT and masquerading →](/posts/how-pods-reach-internet-nat-masquerading/)
+> [Part 3: DNAT and load balancing →](/posts/exposing-service-dnat-load-balancing-iptables/)
+{: .prompt-tip }
+
 ## The problem
 
 `kubectl get pods` — everything `Running`. Logs look fine. Pod A still can't reach Pod B. Most engineers don't know where to look because they never saw how the network was built. This article builds it from scratch, using only Linux primitives.
