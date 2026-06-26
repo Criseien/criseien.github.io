@@ -102,9 +102,15 @@ Namespaces can talk to each other through the bridge, but they can't reach the i
 # enable IP forwarding
 sysctl -w net.ipv4.ip_forward=1
 
+# allow the bridge traffic to be forwarded
+iptables -A FORWARD -i br0 -j ACCEPT
+iptables -A FORWARD -o br0 -j ACCEPT
+
 # masquerade outbound traffic
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ```
+
+Without the `FORWARD` rules, packets reach the bridge but get dropped — the kernel's default policy is `DROP` on the FORWARD chain. You'll see the masquerade rule in place and still get no connectivity; this is the most common point of confusion when building this by hand.
 
 This is exactly how pods reach external services in Kubernetes — and why broken iptables rules on a node can silently kill outbound connectivity.
 

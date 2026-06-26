@@ -33,31 +33,25 @@ The bridge handles traffic *between* namespaces on the same host. To get traffic
 
 ## Step 1: IP forwarding
 
-By default, Linux does not forward packets between network interfaces. It drops them. This is a security default — a machine that isn't a router shouldn't behave like one.
-
-The setting that controls this:
+This was covered in [Part 1](/posts/building-container-network-from-scratch/) — `ip_forward` was enabled alongside the FORWARD chain rules to allow bridged traffic through. Verify it's still set before continuing:
 
 ```bash
-# check current state — 0 means disabled
-sysctl net.ipv4.ip_forward
-```
-
-To enable it:
-
-```bash
-# temporary — resets on reboot
-sysctl -w net.ipv4.ip_forward=1
-
-# permanent
-echo 'net.ipv4.ip_forward = 1' >> /etc/sysctl.conf
-sysctl -p
-
-# verify
 sysctl net.ipv4.ip_forward
 # net.ipv4.ip_forward = 1
 ```
 
-With forwarding enabled, the kernel will pass packets from `br0` to `eth0`. But there's still a problem: the packet leaving through `eth0` carries the namespace's private IP as its source address — `10.0.0.1`. The internet has no idea how to route a response back to a private address. That's where NAT comes in.
+If it's `0`, re-enable it:
+
+```bash
+# temporary
+sysctl -w net.ipv4.ip_forward=1
+
+# permanent — prefer sysctl.d for production
+echo 'net.ipv4.ip_forward = 1' > /etc/sysctl.d/99-forwarding.conf
+sysctl --system
+```
+
+With forwarding confirmed, the kernel will pass packets from `br0` to `eth0`. But there's still a problem: the packet leaving through `eth0` carries the namespace's private IP as its source address — `10.0.0.1`. The internet has no idea how to route a response back to a private address. That's where NAT comes in.
 
 ---
 

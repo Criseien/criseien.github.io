@@ -8,9 +8,9 @@ description: "Platform Engineer specializing in Kubernetes networking and Linux 
 
 ## Who I am
 
-I'm **Cristian Gómez** — Platform Engineer specializing in **Kubernetes networking and Linux internals**.
+I'm **Cristian Gómez** — an SRE with eight years keeping production alive at one of Mexico's largest banks, now going deep on Kubernetes and Platform Engineering.
 
-Eight years running production SRE at a major bank in Mexico. The kind of environment where something breaks at 2 AM and you have 15 minutes before it affects millions of transactions. That's where I learned what actually matters when packets stop moving — and why most networking problems look mysterious until you understand what's happening at the kernel level.
+My edge is the layer most people treat as a black box: Linux internals and Kubernetes networking. The kind of environment where something breaks at 2 AM and you have 15 minutes before it affects millions of transactions — that's where I learned what actually matters when packets stop moving, and why most networking problems look mysterious until you understand what's happening at the kernel level.
 
 Outside of work I practice Stoicism, suffer through FromSoftware games, and have a long-term plan to own a ranch and grow my own food.
 
@@ -44,7 +44,7 @@ The companion lab repo — **[linux-networking-labs](https://github.com/criseien
 
 ## 📬 Connect
 
-Always open to discussing K8s networking internals and SRE war stories — or the lore of Dark Souls.
+I'm working toward a remote Platform Engineering role. If you build or hire for internal developer platforms — or you've made the SRE-to-platform jump yourself — I'd genuinely like to hear how you think about it. Reach out.
 
 [<i class="fab fa-github fa-2x"></i>](https://github.com/Criseien)
 &nbsp;&nbsp;
