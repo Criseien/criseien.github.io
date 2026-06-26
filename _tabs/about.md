@@ -38,7 +38,7 @@ The **From Scratch** series: Platform Engineering explained from the internals o
 
 Every article starts where the abstractions end — at the Linux kernel, at the iptables rule, at the conntrack table. I build the concept by hand, trace the full packet path, map it back to what Kubernetes does under the hood, and close with a troubleshooting checklist you can actually use in production.
 
-The companion lab repo — **[linux-networking-labs](https://github.com/criseien/linux-networking-labs)** — has the hands-on implementations behind each article.
+The companion lab repo — **[linux-networking-lab](https://github.com/Criseien/linux-networking-lab)** — has the hands-on implementations behind each article.
 
 ---
 
