@@ -38,16 +38,16 @@ The **From Scratch** series: Platform Engineering explained from the internals o
 
 Every article starts where the abstractions end — at the Linux kernel, at the iptables rule, at the conntrack table. I build the concept by hand, trace the full packet path, map it back to what Kubernetes does under the hood, and close with a troubleshooting checklist you can actually use in production.
 
-The companion lab repo — **[linux-networking-lab](https://github.com/Criseien/linux-networking-lab)** — has the hands-on implementations behind each article.
+The applied counterpart is **[Limen](https://github.com/Criseien/Limen)** — a fictional bank with real legacy problems, transformed phase by phase, with CI, Ansible, and ADRs documenting every deliberate anti-pattern before the fix. Same instinct as the writing: build it, break it, understand it, fix it — reasoning kept, not just the commands.
 
 ---
 
 ## 📬 Connect
 
-I'm working toward a remote Platform Engineering role. If you build or hire for internal developer platforms — or you've made the SRE-to-platform jump yourself — I'd genuinely like to hear how you think about it. Reach out.
+If you work on internal developer platforms, Kubernetes networking, or made the SRE-to-platform jump yourself, I'd like to hear how you think about it.
 
 [<i class="fab fa-github fa-2x"></i>](https://github.com/Criseien)
 &nbsp;&nbsp;
-[<i class="fab fa-linkedin fa-2x"></i>](https://www.linkedin.com/in/agcristian/)
+[<i class="fab fa-linkedin fa-2x"></i>](https://www.linkedin.com/in/cristiangomezaranda/)
 &nbsp;&nbsp;
 [<i class="fas fa-envelope fa-2x"></i>](mailto:agcristianaranda@icloud.com)
