@@ -182,3 +182,7 @@ Next time a `Service` isn't routing traffic correctly, you have a checklist:
 - Is the pod actually listening on the target port? `ip netns exec <ns> ss -tlnp`
 
 Start there.
+
+---
+
+**Banco Limen:** See how network boundaries and infrastructure decisions are documented before they are repaired in later phases. [Explore the Limen architecture →](/limen/)

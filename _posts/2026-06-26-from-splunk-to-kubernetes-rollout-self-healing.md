@@ -22,7 +22,7 @@ The system worked. It just required humans at every step: to notice, to escalate
 
 ## Today, my rollout broke — and I didn't have to notice
 
-I'm currently on a technical sabbatical focused on Kubernetes and platform engineering. During a drill today, I pushed an image update using a tag I hadn't verified:
+I'm currently deep in hands-on Kubernetes and platform engineering practice. During a drill today, I pushed an image update using a tag I hadn't verified:
 
 ```bash
 kubectl set image deployment api httpd=httpd:2.4.1 --namespace=drill-fri
@@ -119,3 +119,7 @@ I spent eight years building the human layer on top of reactive monitoring. What
 ```
 
 The cluster will tell you what's wrong. You just need to know where to look.
+
+---
+
+**Banco Limen:** See the Phase 1 reconstruction behind the same questions of alert fatigue, recovery, and operational decision-making. [Explore the Limen architecture →](/limen/)

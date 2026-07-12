@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="80" ry="80" fill="#1e1e2e"/>
+  <rect width="512" height="512" rx="64" ry="64" fill="#101411"/>
   <text
-    x="256"
-    y="320"
-    font-family="'Courier New', Courier, monospace"
-    font-size="200"
-    font-weight="bold"
-    fill="#50fa7b"
+    x="240"
+    y="286"
+    font-family="'IBM Plex Mono', 'SFMono-Regular', Menlo, Consolas, monospace"
+    font-size="300"
+    font-weight="600"
+    fill="#bbef77"
     text-anchor="middle"
     dominant-baseline="middle"
-  >&gt;_</text>
+  >/</text>
 </svg>

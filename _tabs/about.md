@@ -1,53 +1,115 @@
 ---
-# the default layout is 'page'
+layout: profile
 title: About
 icon: fas fa-info-circle
 order: 4
-description: "Platform Engineer specializing in Kubernetes networking and Linux internals. Home of the From Scratch series — building the Kubernetes network stack from the kernel up."
+description: "Platform Engineer specializing in Kubernetes networking, Linux infrastructure, and reliable systems."
 ---
 
-## Who I am
+<header class="profile-hero">
+  <div>
+    <p class="eyebrow">About / Systems, platforms, and the path between</p>
+    <h1>Platform engineering grounded in production reality.</h1>
+    <p class="profile-hero__lede">
+      I’m Cristian Gómez Aranda — a Platform Engineer and SRE with eight years operating critical systems at Citibanamex.
+      I work where reliability, Linux infrastructure, and Kubernetes networking meet.
+    </p>
+  </div>
+  <div class="profile-portrait">
+    <img src="{{ '/assets/Imagen.jpg' | relative_url }}" alt="Cristian Gómez Aranda">
+  </div>
+</header>
 
-I'm **Cristian Gómez** — an SRE with eight years keeping production alive at one of Mexico's largest banks, now going deep on Kubernetes and Platform Engineering.
+<dl class="profile-stats" aria-label="Selected operational impact">
+  <div>
+    <dt>Automation</dt>
+    <dd>~22,500 annual hours of manual work removed through automation</dd>
+  </div>
+  <div>
+    <dt>Recovery</dt>
+    <dd>A critical recovery path reduced from ~4 hours to 15 minutes</dd>
+  </div>
+  <div>
+    <dt>Experience</dt>
+    <dd>8 years keeping high-stakes production systems operable</dd>
+  </div>
+</dl>
 
-My edge is the layer most people treat as a black box: Linux internals and Kubernetes networking. The kind of environment where something breaks at 2 AM and you have 15 minutes before it affects millions of transactions — that's where I learned what actually matters when packets stop moving, and why most networking problems look mysterious until you understand what's happening at the kernel level.
+<section class="profile-section">
+  <p class="eyebrow">How I work</p>
+  <h2>Start with the mechanism. Design for the person on call.</h2>
+  <div class="profile-section__body">
+    <p>
+      My strongest work happens below the abstraction layer: the namespace, the iptables rule, the conntrack table,
+      the systemd unit, and the operational decision that determines whether an incident becomes routine or catastrophic.
+    </p>
+    <p>
+      In that environment, when something breaks at 2 AM, you may have 15 minutes before it affects millions of transactions.
+      Eight years in banking taught me that infrastructure is never only technical: good platform work makes risk visible,
+      removes unnecessary manual effort, and gives engineers a safe path to move faster.
+    </p>
+    <p>
+      That depth is a deliberate choice, not a gap: I go past the managed-cloud abstraction layer — the Helm chart, the
+      console click, the Terraform apply — on purpose, because understanding what is actually running underneath a
+      platform is what turns an incident into something routine instead of something mysterious. Most platforms are
+      operated by people who stopped at the abstraction. I kept going.
+    </p>
+    <p>
+      That depth doesn't stay solo, either. Inside the bank, I built and delivered internal training on production
+      operations and AI-assisted automation tooling — video walkthroughs, automation guides, Copilot usage guides — and
+      ran live sessions for the wider production team. None of that material is public; it lived inside the bank's
+      internal systems. But the habit is the same one behind this site: understand something deeply, then make it
+      legible for the next person.
+    </p>
+  </div>
 
-Outside of work I practice Stoicism, suffer through FromSoftware games, and have a long-term plan to own a ranch and grow my own food.
+  <div class="focus-grid">
+    <div>
+      <h3>Kubernetes networking</h3>
+      <p>Namespaces, veth pairs, iptables, kube-proxy, CoreDNS, CNI fundamentals, and the full packet path.</p>
+    </div>
+    <div>
+      <h3>Linux systems</h3>
+      <p>RHEL-family operating systems, cgroups, systemd, containers, and the primitives that make a platform run.</p>
+    </div>
+    <div>
+      <h3>Reliable operations</h3>
+      <p>Automation, observability, incident response, and infrastructure decisions that are traceable and defensible.</p>
+    </div>
+  </div>
+</section>
 
-> *"It is not that we have a short time to live, but that we waste a great deal of it."* — Seneca
+<section class="profile-section">
+  <p class="eyebrow">Public work</p>
+  <h2>Evidence over a tool list.</h2>
+  <div class="proof-list">
+    <a href="{{ '/limen/' | relative_url }}">
+      <strong>Banco Limen — a Phase 1 reconstruction of legacy failure modes and decision records</strong><span>↗</span>
+    </a>
+    <a href="{{ '/' | relative_url }}#writing">
+      <strong>From Scratch — Kubernetes networking explained from Linux primitives</strong><span>↗</span>
+    </a>
+    <a href="https://github.com/Criseien/platform-fundamentals" target="_blank" rel="noopener noreferrer">
+      <strong>Platform fundamentals — archived, hands-on reference work from kernel to orchestration</strong><span>↗</span>
+    </a>
+  </div>
+</section>
 
----
+<section class="profile-section profile-now">
+  <p class="profile-now__label">Now / 2026–27</p>
+  <div>
+    <h2>Preparing for AI workload infrastructure.</h2>
+    <p>
+      I’m deepening my Kubernetes networking and platform fundamentals through hands-on projects and public writing.
+      Next, I’m studying how those foundations support secure, observable AI workloads through model serving,
+      multi-tenancy, network isolation, and operational evidence.
+    </p>
+  </div>
+</section>
 
-### Tech Stack & Focus
-
-<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-start;">
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/eBPF-FF6600?style=for-the-badge&logo=linux&logoColor=white" alt="eBPF">
-  <img src="https://img.shields.io/badge/Cilium-F8C517?style=for-the-badge&logo=cilium&logoColor=black" alt="Cilium">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS">
-  <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-</div>
-
----
-
-## What I'm building
-
-The **From Scratch** series: Platform Engineering explained from the internals out, for engineers who want to understand *why*, not just *how*.
-
-Every article starts where the abstractions end — at the Linux kernel, at the iptables rule, at the conntrack table. I build the concept by hand, trace the full packet path, map it back to what Kubernetes does under the hood, and close with a troubleshooting checklist you can actually use in production.
-
-The applied counterpart is **[Limen](https://github.com/Criseien/Limen)** — a fictional bank with real legacy problems, transformed phase by phase, with CI, Ansible, and ADRs documenting every deliberate anti-pattern before the fix. Same instinct as the writing: build it, break it, understand it, fix it — reasoning kept, not just the commands.
-
----
-
-## 📬 Connect
-
-If you work on internal developer platforms, Kubernetes networking, or made the SRE-to-platform jump yourself, I'd like to hear how you think about it.
-
-[<i class="fab fa-github fa-2x"></i>](https://github.com/Criseien)
-&nbsp;&nbsp;
-[<i class="fab fa-linkedin fa-2x"></i>](https://www.linkedin.com/in/cristiangomezaranda/)
-&nbsp;&nbsp;
-[<i class="fas fa-envelope fa-2x"></i>](mailto:agcristianaranda@icloud.com)
+<section class="profile-contact" aria-label="Connect">
+  <p>Open to remote Platform Engineer and SRE roles with teams running Kubernetes in production — based in Mexico City, strong overlap with US business hours.</p>
+  <a class="button button--primary" href="mailto:agcristianaranda@icloud.com">Email me <span aria-hidden="true">↗</span></a>
+  <a class="button button--quiet" href="https://www.linkedin.com/in/cristiangomezaranda/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+  <a class="button button--quiet" href="{{ '/assets/cv-cristian-gomez-aranda.pdf' | relative_url }}" download>Download CV <span aria-hidden="true">↓</span></a>
+</section>

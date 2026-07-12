@@ -127,3 +127,7 @@ Next time a pod can't reach an external service, you have a checklist:
 - Is conntrack tracking the connection?
 
 Start there.
+
+---
+
+**Banco Limen:** See how flat networks and missing isolation become explicit failure modes in a controlled Phase 1 reconstruction. [Explore the Limen architecture →](/limen/)

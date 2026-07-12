@@ -119,3 +119,7 @@ This is exactly how pods reach external services in Kubernetes — and why broke
 You built the network by hand: namespaces, veth pairs, a bridge, NAT. That's all Kubernetes networking is — the CNI plugin just does this automatically when a pod starts.
 
 Next time a pod can't reach another, you have a map: does the veth exist? Is the bridge up? Is there a route inside the namespace? Is iptables blocking `FORWARD`? Start there.
+
+---
+
+**Banco Limen:** See how networking, isolation, and operational trade-offs are documented in a controlled Phase 1 reconstruction. [Explore the Limen architecture →](/limen/)

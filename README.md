@@ -1,43 +1,21 @@
-# Chirpy Starter
+# Cristian Gómez Aranda
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+> Platform Engineering from the systems up.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+The source for [icris.me](https://www.icris.me): writing and public work on Kubernetes networking, Linux infrastructure, reliable operations, and the foundations behind AI workloads.
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+## What to read first
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+- **[From Scratch](https://www.icris.me/#writing)** — Kubernetes networking built from Linux primitives: namespaces, veth pairs, iptables, NAT, conntrack, DNS, and the packet path.
+- **[Banco Limen](https://github.com/Criseien/Limen)** — a documented reconstruction of legacy infrastructure failure patterns, with ADRs, CI, Ansible, Prometheus, and operational reasoning.
+- **[About](https://www.icris.me/about/)** — eight years of production systems experience, the impact behind the work, and what I am building next.
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+## Why this exists
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+I write for engineers who want to understand the mechanism behind a platform, not only the command that operates it. Each piece connects a system primitive to a real diagnostic or production decision.
 
-## Usage
+The site is built with Jekyll and customized from the Chirpy theme.
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+## Contact
 
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+[GitHub](https://github.com/Criseien) · [LinkedIn](https://www.linkedin.com/in/cristiangomezaranda/) · [Email](mailto:agcristianaranda@icloud.com)

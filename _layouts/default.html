@@ -1,0 +1,189 @@
+---
+layout: compress
+---
+
+{% include origin-type.html %}
+{% include lang.html %}
+
+{% if site.theme_mode %}
+  {% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
+{% endif %}
+
+<!doctype html>
+<html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f2">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101411">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    {% seo title=false %}
+
+    <title>
+      {% unless page.layout == 'home' %}{{ page.title | append: ' | ' }}{% endunless %}{{ site.title }}
+    </title>
+
+    {% include_cached favicons.html %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
+    <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/brand.css' | relative_url }}">
+
+    {% if page.layout == 'post' %}
+      <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
+      <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">
+    {% endif %}
+
+    <!-- Scripts: without this, Chirpy's interactive JS (TOC popup, copy-link, image lightbox) never loads -->
+    <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>
+    {% include js-selector.html lang=lang %}
+
+  </head>
+
+  <body class="brand-shell brand-shell--{{ page.layout | default: 'page' }}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <div class="site-frame site-header__inner">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+          <span>CGA</span><i aria-hidden="true">/</i>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="{{ '/#writing' | relative_url }}">Writing</a>
+          <a href="{{ '/limen/' | relative_url }}">Limen</a>
+          <a href="{{ '/archives/' | relative_url }}">Archive</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <a class="availability-link" href="mailto:{{ site.social.email }}">Open to remote roles</a>
+          {% unless site.theme_mode %}
+            <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Switch color mode">
+              <span aria-hidden="true">◐</span>
+            </button>
+          {% endunless %}
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main site-frame{% if page.layout == 'home' %} site-frame--home{% endif %}">
+      {% if layout.layout == 'default' and page.layout != 'profile' %}
+        {% include refactor-content.html content=content lang=lang %}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </main>
+
+    {% if layout.tail_includes %}
+      <section class="site-tail site-frame" aria-label="More reading">
+        {% for _include in layout.tail_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    <footer class="site-footer">
+      <div class="site-frame site-footer__inner">
+        <p>© {{ 'now' | date: '%Y' }} {{ site.social.name }}.</p>
+        <div>
+          <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/cristiangomezaranda/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
+
+    {% for _include in layout.script_includes %}
+      {% assign _include_path = _include | append: '.html' %}
+      {% include {{ _include_path }} %}
+    {% endfor %}
+
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const button = document.getElementById('mode-toggle');
+        const storageKey = 'cga-color-mode';
+        const setMode = (mode) => {
+          root.dataset.brandMode = mode;
+          root.dataset.mode = mode;
+          button?.setAttribute('aria-label', `Switch to ${mode === 'dark' ? 'light' : 'dark'} color mode`);
+        };
+
+        const savedMode = localStorage.getItem(storageKey);
+        setMode(savedMode || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+
+        button?.addEventListener('click', () => {
+          const nextMode = root.dataset.brandMode === 'dark' ? 'light' : 'dark';
+          localStorage.setItem(storageKey, nextMode);
+          setMode(nextMode);
+        });
+      })();
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Copy-link: Chirpy's own handler silently fails to attach (depends on sidebar
+        // DOM this redesign doesn't have), so wire it up directly here instead.
+        // Clipboard API first, execCommand fallback for older/stricter browsers (Safari
+        // in particular has historically been inconsistent here), plus a visible label
+        // swap so clicking it gives obvious feedback instead of a silent title-attribute change.
+        const copyBtn = document.getElementById('copy-link');
+        copyBtn?.addEventListener('click', async () => {
+          const url = window.location.href;
+          let copied = false;
+
+          if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) {
+            try {
+              await navigator.clipboard.writeText(url);
+              copied = true;
+            } catch (err) {
+              copied = false;
+            }
+          }
+
+          if (!copied) {
+            const textarea = document.createElement('textarea');
+            textarea.value = url;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            try {
+              copied = document.execCommand('copy');
+            } catch (err) {
+              copied = false;
+            }
+            document.body.removeChild(textarea);
+          }
+
+          // Chirpy's post.html markup for this button is in the theme gem, not editable
+          // here, so the feedback badge is built at runtime instead of in the template.
+          let badge = copyBtn.querySelector('.copy-feedback');
+          if (!badge) {
+            badge = document.createElement('span');
+            badge.className = 'copy-feedback';
+            copyBtn.appendChild(badge);
+          }
+          badge.textContent = copied ? 'Copied' : 'Copy failed';
+          copyBtn.classList.add('is-copied');
+          clearTimeout(copyBtn._copyResetTimer);
+          copyBtn._copyResetTimer = setTimeout(() => {
+            copyBtn.classList.remove('is-copied');
+          }, 1800);
+        });
+      });
+    </script>
+  </body>
+</html>
