@@ -122,4 +122,4 @@ Next time a pod can't reach another, you have a map: does the veth exist? Is the
 
 ---
 
-**Banco Limen:** See how networking, isolation, and operational trade-offs are documented in a controlled Phase 1 reconstruction. [Explore the Limen architecture →](/limen/)
+**Banco Limen:** A fictional on-premise bank shaped by recurring production patterns. [Explore the Phase 1 baseline →](https://limen.icris.me/)

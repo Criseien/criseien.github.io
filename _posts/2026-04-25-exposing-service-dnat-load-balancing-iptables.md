@@ -185,4 +185,4 @@ Start there.
 
 ---
 
-**Banco Limen:** See how network boundaries and infrastructure decisions are documented before they are repaired in later phases. [Explore the Limen architecture →](/limen/)
+**Banco Limen:** A fictional on-premise bank shaped by recurring production patterns. [Explore the Phase 1 baseline →](https://limen.icris.me/)

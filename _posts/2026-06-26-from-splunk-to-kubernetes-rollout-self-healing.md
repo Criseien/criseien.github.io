@@ -122,4 +122,4 @@ The cluster will tell you what's wrong. You just need to know where to look.
 
 ---
 
-**Banco Limen:** See the Phase 1 reconstruction behind the same questions of alert fatigue, recovery, and operational decision-making. [Explore the Limen architecture →](/limen/)
+**Banco Limen:** A fictional on-premise bank shaped by recurring production patterns. [Explore the Phase 1 baseline →](https://limen.icris.me/)

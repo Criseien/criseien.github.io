@@ -130,4 +130,4 @@ Start there.
 
 ---
 
-**Banco Limen:** See how flat networks and missing isolation become explicit failure modes in a controlled Phase 1 reconstruction. [Explore the Limen architecture →](/limen/)
+**Banco Limen:** A fictional on-premise bank shaped by recurring production patterns. [Explore the Phase 1 baseline →](https://limen.icris.me/)
