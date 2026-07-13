@@ -83,8 +83,8 @@ description: "Platform Engineer specializing in Kubernetes networking, Linux inf
   <p class="eyebrow">Public work</p>
   <h2>Evidence over a tool list.</h2>
   <div class="proof-list">
-    <a href="{{ '/limen/' | relative_url }}">
-      <strong>Banco Limen — a Phase 1 reconstruction of legacy failure modes and decision records</strong><span>↗</span>
+    <a href="https://limen.icris.me/">
+      <strong>Banco Limen — a fictional on-premise bank shaped by recurring production patterns</strong><span>↗</span>
     </a>
     <a href="{{ '/' | relative_url }}#writing">
       <strong>From Scratch — Kubernetes networking explained from Linux primitives</strong><span>↗</span>

@@ -7,7 +7,7 @@ The source for [icris.me](https://www.icris.me): writing and public work on Kube
 ## What to read first
 
 - **[From Scratch](https://www.icris.me/#writing)** — Kubernetes networking built from Linux primitives: namespaces, veth pairs, iptables, NAT, conntrack, DNS, and the packet path.
-- **[Banco Limen](https://github.com/Criseien/Limen)** — a documented reconstruction of legacy infrastructure failure patterns, with ADRs, CI, Ansible, Prometheus, and operational reasoning.
+- **[Limen](https://limen.icris.me/)** — a fictional on-premise bank shaped by 33 operational patterns. Phase 1 makes the baseline visible before the platform transformation begins. [Repository](https://github.com/Criseien/Limen).
 - **[About](https://www.icris.me/about/)** — eight years of production systems experience, the impact behind the work, and what I am building next.
 
 ## Why this exists
