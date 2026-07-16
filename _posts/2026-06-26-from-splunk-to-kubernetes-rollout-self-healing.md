@@ -10,7 +10,7 @@ For eight years I worked as an SRE at a major financial institution. Legacy serv
 
 ## The problem with detecting your own failures
 
-The architecture to manage that alert volume was layered. Each domain — the mobile app, web banking, SPEI, card processing — had its own distribution list with pre-filtered, high-priority alerts routed directly to the responsible team. The intent was good: reduce noise, surface what matters, close the gap between failure and response.
+The architecture to manage that alert volume was layered. Each domain had its own distribution list with pre-filtered, high-priority alerts routed directly to the responsible team. The intent was good: reduce noise, surface what matters, close the gap between failure and response.
 
 At the scale of a large institution, across multiple shifts and dozens of services running simultaneously, alerts still got buried. An incident would start silently. By the time it was detected, triaged, and routed to the right specialist team, a service had been failing for minutes. Sometimes longer.
 
@@ -18,7 +18,7 @@ Then the real work started. In production at a bank, you don't just restart a se
 
 Once approved, the team would open the internal Ansible automation platform, select the right playbook — restart httpd, restart the Java service, restart the JVM — and run it. Watch the console output confirm the service came back. Then switch to the monitoring dashboards to verify recovery. Then close the incident.
 
-The system worked. It just required humans at every step: to notice, to escalate, to approve, to run the automation, to verify. For a Tier 1 incident affecting payments, that cycle runs under an hour with a full MIM bridge open and every team on the call. For a Tier 3, resolution SLAs run to four hours. Either way, every minute between failure and detection is a minute of client impact — and on a payment outage, that impact is measurable in transaction volume, not just inconvenience.
+The system worked. It just required humans at every step: to notice, to escalate, to approve, to run the automation, to verify. Even with every team already on an incident bridge, that cycle is measured in hours, not minutes. And every minute between failure and detection is a minute of client impact — on a payment outage, that impact is measurable in transaction volume, not just inconvenience.
 
 ## Today, my rollout broke — and I didn't have to notice
 
