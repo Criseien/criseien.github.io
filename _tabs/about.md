@@ -89,9 +89,6 @@ description: "Platform Engineer specializing in Kubernetes networking, Linux inf
     <a href="{{ '/' | relative_url }}#writing">
       <strong>From Scratch — Kubernetes networking explained from Linux primitives</strong><span>↗</span>
     </a>
-    <a href="https://github.com/Criseien/platform-fundamentals" target="_blank" rel="noopener noreferrer">
-      <strong>Platform fundamentals — archived, hands-on reference work from kernel to orchestration</strong><span>↗</span>
-    </a>
   </div>
 </section>
 
