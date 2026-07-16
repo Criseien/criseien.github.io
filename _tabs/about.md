@@ -111,5 +111,4 @@ description: "Platform Engineer specializing in Kubernetes networking, Linux inf
   <p>Open to remote Platform Engineer and SRE roles with teams running Kubernetes in production — based in Mexico City, strong overlap with US business hours.</p>
   <a class="button button--primary" href="mailto:agcristianaranda@icloud.com">Email me <span aria-hidden="true">↗</span></a>
   <a class="button button--quiet" href="https://www.linkedin.com/in/cristiangomezaranda/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-  <a class="button button--quiet" href="{{ '/assets/cv-cristian-gomez-aranda.pdf' | relative_url }}" download>Download CV <span aria-hidden="true">↓</span></a>
 </section>
