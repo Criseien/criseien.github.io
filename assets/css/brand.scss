@@ -11,6 +11,9 @@
   --brand-accent-ink: #eaffd6;
   --brand-code: #e7ede4;
   --brand-shadow: rgba(20, 32, 25, 0.08);
+  --brand-button-shadow: #fff;
+  --brand-button-quiet-bg: var(--brand-ink);
+  --brand-button-quiet-ink: var(--brand-bg);
 }
 
 html[data-brand-mode='dark'] {
@@ -23,6 +26,9 @@ html[data-brand-mode='dark'] {
   --brand-accent-ink: #10180f;
   --brand-code: #1a221b;
   --brand-shadow: rgba(0, 0, 0, 0.22);
+  --brand-button-shadow: #fff;
+  --brand-button-quiet-bg: var(--brand-bg);
+  --brand-button-quiet-ink: var(--brand-ink);
 }
 
 * { box-sizing: border-box; }
@@ -187,7 +193,7 @@ body.brand-shell a:focus-visible,
   line-height: 1.62;
 }
 
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.25rem; }
+.hero-actions { display: flex; flex-wrap: wrap; column-gap: 1.25rem; row-gap: 1rem; margin-top: 2.25rem; }
 
 .button {
   display: inline-flex;
@@ -196,21 +202,23 @@ body.brand-shell a:focus-visible,
   min-height: 2.9rem;
   padding: 0.65rem 1rem;
   border: 1px solid var(--brand-line);
+  box-shadow: 0.58rem 0.58rem 0 var(--brand-button-shadow);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.74rem;
   font-weight: 500;
   letter-spacing: 0.025em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.button:hover,
-.button:focus-visible { transform: translateY(-2px); }
+.button:hover { transform: translate(0.14rem, 0.14rem); box-shadow: 0.44rem 0.44rem 0 var(--brand-button-shadow); }
+.button:active { transform: translate(0.58rem, 0.58rem); box-shadow: 0 0 0 var(--brand-button-shadow); }
+.button:focus-visible { outline: 2px solid var(--brand-accent); outline-offset: 4px; }
 
 .button--primary { border-color: var(--brand-accent); background: var(--brand-accent); color: var(--brand-accent-ink) !important; }
-.button--quiet:hover,
-.button--quiet:focus-visible { border-color: var(--brand-ink); background: var(--brand-surface); }
+.button--quiet { border-color: var(--brand-button-quiet-bg); background: var(--brand-button-quiet-bg); color: var(--brand-button-quiet-ink) !important; }
+.button--quiet:hover { border-color: var(--brand-button-quiet-bg); background: var(--brand-button-quiet-bg); }
 
 .hero-signal {
   padding: 1.35rem;
